@@ -133,7 +133,22 @@ main a {
 }
 
 
+.angeloGallery img:hover {
+    width: 98%;
+    height: auto;
+    box-shadow: 0px 0px 10px black;
+}
 
+img.hero {
+width: 100%;
+margin: 0;
+}
+
+img.hero {
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
 
 /* footer stuff here */
 footer {
@@ -146,4 +161,10 @@ footer {
 }
 footer a {
     color: #8b5022;
+}
+
+
+header, nav, main, footer {
+    max-width: 64rem;
+    margin: 0 auto;
 }
