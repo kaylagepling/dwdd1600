@@ -1,0 +1,475 @@
+/* -------------------------------------------------- */
+/* GENERAL PAGE SETUP                                 */
+/* -------------------------------------------------- */
+
+body {
+    font-family: 'Lora', serif; 
+    background-color: #FAF8F5; 
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+* {
+    box-sizing: border-box;
+}
+
+/* -------------------------------------------------- */
+/* HEADER SECTION                                     */
+/* -------------------------------------------------- */
+
+header {
+    /* REQUIREMENT: Implement a CSS Gradient */
+    background: linear-gradient(to right, #1a331a, #2D572C);
+    color: #FAF8F5;
+    padding: 1rem 0;
+    /* REQUIREMENT: Limit width and center */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Flexbox to position logo next to text */
+.header-inner {
+    display: flex;
+    align-items: center; /* Vertically center */
+    justify-content: center; /* Horizontally center */
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.logo {
+    max-width: 80px; /* REQUIREMENT: Logo no more than 100px */
+    height: auto;
+}
+
+.site-name h1 {
+    margin: 0;
+    font-size: 2.5rem; 
+    font-weight: 500;
+    color: #FAF8F5;
+    text-align: left; /* Aligns text left relative to the logo */
+}
+
+.site-name p {
+    margin: 0;
+    font-style: italic;
+    color: #8AA389;
+    text-align: left;
+}
+
+/* -------------------------------------------------- */
+/* HERO IMAGE                                         */
+/* -------------------------------------------------- */
+
+.hero-container {
+    /* REQUIREMENT: Full width scaling hero image */
+    background-image: url('images/hero.jpg');
+    background-size: cover; /* Scales image to fill box */
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* REQUIREMENT: Limit width and center */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hero-text {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent box */
+    padding: 20px 40px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #2D572C;
+}
+
+.hero-text h2 {
+    color: #2D572C;
+    margin: 0;
+    font-size: 2rem;
+    border: none;
+}
+
+
+/* -------------------------------------------------- */
+/* NAVIGATION BAR                                     */
+/* -------------------------------------------------- */
+
+nav {
+    background-color: #8AA389; 
+    border-bottom: 5px solid #2D572C;
+    /* REQUIREMENT: Limit width and center */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+nav ul {
+    display: flex;
+    /* REQUIREMENT: Single column of menu items on small screen */
+    flex-direction: column; 
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    margin: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.3); /* Dividers for mobile */
+}
+
+nav a {
+    display: block;
+    padding: 1rem; 
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #FAF8F5;
+    color: #2D572C; 
+}
+
+nav a.active {
+    background-color: #2D572C;
+    color: #FFFFFF;
+}
+
+/* REQUIREMENT: Media Query for Desktop Navigation */
+@media (min-width: 768px) {
+    nav ul {
+        /* REQUIREMENT: Horizontal list on larger screens */
+        flex-direction: row; 
+        justify-content: center;
+    }
+    
+    nav li {
+        border-bottom: none; /* Remove mobile dividers */
+    }
+}
+/* -------------------------------------------------- */
+/* MAIN CONTENT                                       */
+/* -------------------------------------------------- */
+
+main {
+    /* REQUIREMENT: Limit width and center */
+    max-width: 1000px; 
+    margin: 2rem auto; 
+    /* Keep your existing padding/border styling here... */
+    padding: 2rem; 
+    background-color: #ffffff; 
+    border: 1px solid #8AA389; 
+    border-radius: 8px;        
+}
+
+h1 {
+    color: #2D572C;
+    font-weight: 500;
+}
+
+h2 {
+    color: #B86F52; 
+    border-bottom: 1px solid #8AA389;
+    padding-bottom: 5px;
+}
+
+p {
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+}
+
+main a {
+    color: #B86F52;
+    font-weight: bold;
+}
+
+main a:hover {
+    color: #2D572C;
+    text-decoration: none;
+}
+/* -------------------------------------------------- */
+/* LIST STYLING                                       */
+/* -------------------------------------------------- */
+
+ul {
+    list-style-type: square; 
+}
+
+li {
+    margin-bottom: 0.5rem;
+    padding-left: 5px;
+}
+
+dt {
+    font-weight: bold;
+    color: #2D572C;
+    margin-top: 1rem;
+    font-size: 1.1em;
+}
+
+dd {
+    margin-left: 20px;
+    font-style: italic;
+    color: #555;
+}
+
+/* -------------------------------------------------- */
+/* SPECIAL ELEMENTS & FOOTER                          */
+/* -------------------------------------------------- */
+
+address {
+    /* Removed the box/border properties */
+    background-color: transparent; 
+    border: none;
+    
+    /* Changed text styling to blend with footer */
+    color: #8AA389; /* Sage Green text */
+    font-style: normal;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+footer {
+    background-color: #2D572C;
+    color: #FAF8F5;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+
+/* -------------------------------------------------- */
+/* MODULE 5: IMAGES & GALLERY                         */
+/* -------------------------------------------------- */
+
+/* 1. Global Image Rules */
+img {
+    max-width: 100%; /* Makes images responsive */
+    height: auto;    /* Maintains aspect ratio */
+}
+
+/* 2. Home Page Floated Image */
+.float-right {
+    float: right;        /* Pushes image to the right */
+    width: 40%;          /* Sets size to percentage */
+    margin-left: 20px;   /* Adds space between text and image */
+    margin-bottom: 20px;
+    border: 1px solid #8AA389; /* Optional: matches your theme */
+    padding: 5px;
+    background-color: #fff;
+}
+
+/* Figure Caption Styling */
+figcaption {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #555;
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* 3. Footer Clear Fix (Requirement) */
+footer {
+    /* REQUIREMENT: Limit width and center */
+    max-width: 1000px;
+    margin: 3rem auto 0 auto; /* Top margin 3rem, Auto L/R */
+    
+    background-color: #2D572C;
+    color: #FAF8F5;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+/* 4. Gallery Flexbox Layout */
+.gallery-grid {
+    display: flex;       /* The Magic Flexbox command */
+    flex-wrap: wrap;     /* Allows items to wrap to next row */
+    justify-content: center; /* Centers items */
+    gap: 20px;           /* Space between images */
+}
+
+/* Individual Gallery Figures */
+.gallery-grid figure {
+    /* Flex shorthand: grow (0), shrink (1), basis (250px) */
+    /* This ensures they stay in columns */
+    flex: 0 1 250px; 
+    margin: 0;           /* Resets default browser margin */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Adds nice shadow */
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+}
+.gallery-grid figure:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3); /* Deeper shadow */
+    transform: translateY(-5px); /* Slight lift effect */
+}
+/* -------------------------------------------------- */
+/* MODULE 6: WEB FORMS                                */
+/* -------------------------------------------------- */
+
+/* Form Container */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: 'Lora', serif;
+}
+
+/* Requirement: Style the fieldsets and legends */
+fieldset {
+    border: 2px solid #8AA389; /* Sage Green */
+    border-radius: 10px;       /* Requirement: Round corners */
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+legend {
+    color: #B86F52;            /* Terracotta */
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0 10px;
+}
+
+/* Requirement: Everything is left aligned (straight line eye tracking) */
+label {
+    display: block;            /* Forces label to sit on its own line */
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #2D572C;            /* Dark Green */
+    font-weight: 500;
+}
+
+/* Requirement: Styling text inputs, text areas, drop-downs */
+/* Requirement: Inputs have round corners and borders */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;               /* Full width for alignment */
+    padding: 12px;
+    border: 1px solid #8AA389;
+    border-radius: 5px;        /* Round corners */
+    box-sizing: border-box;    /* Ensures padding doesn't break width */
+    font-family: 'Lora', serif;
+    background-color: #FAF8F5; /* Requirement: Background color for typing area */
+    color: #333;               /* Requirement: Text color */
+    font-size: 1rem;
+}
+
+/* Focus state for better accessibility */
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border: 2px solid #B86F52; /* Terracotta highlight when typing */
+}
+
+textarea {
+    height: 150px;             /* Sets height for the big text box */
+}
+
+/* Styling for Checkboxes and Radios (Inline alignment) */
+.inline-group label {
+    display: inline-block;     /* Allows them to sit side-by-side */
+    margin-right: 15px;
+    margin-top: 5px;
+    font-weight: normal;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+    accent-color: #B86F52;     /* Makes the actual checkmark Terracotta */
+}
+
+/* Requirement: Style the submit button */
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;             /* Requirement: Padding */
+    background-color: #2D572C; /* Requirement: Background Color */
+    color: #fff;
+    border: none;              /* Requirement: Border (none or specific) */
+    border-radius: 8px;        /* Requirement: Round corners */
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #B86F52; /* Hover changes to Terracotta */
+}
+/* -------------------------------------------------- */
+/* MODULE 8: MEDIA & TABLES                           */
+/* -------------------------------------------------- */
+
+/* TABLE STYLING */
+table {
+    width: 100%;             /* Requirement: Set width to 100 percent */
+    border-collapse: collapse; /* Removes default separation between cells */
+    margin: 20px 0;
+    font-size: 1rem;
+    background-color: #fff;
+}
+
+/* Requirement: Apply background and font colors to the table head */
+th {
+    background-color: #2D572C; /* Your Dark Green */
+    color: #FAF8F5;            /* Off-White Text */
+    padding: 15px;
+    text-align: left;
+    font-weight: 500;
+}
+
+/* Requirement: Add padding as necessary */
+td {
+    padding: 15px;
+    color: #333;
+}
+
+/* Requirement: Style every other row (Zebra Striping) */
+tr:nth-child(even) {
+    background-color: #E8F0E8; /* Very light green */
+}
+
+/* Requirement: Use the hover state to change on mouse over */
+tr:hover {
+    background-color: #FADAD0; /* Light Terracotta highlight */
+    cursor: default;
+}
+
+/* MEDIA STYLING (Video & Map) */
+/* Requirement: Adjust the width to 100% (Responsive) */
+iframe {
+    width: 100%;
+    border: none;
+    /* Aspect ratio handling for video */
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Map specific height adjustment */
+.map-container iframe {
+    height: 450px;
+    aspect-ratio: auto; /* Maps don't need 16:9 */
+}
+
+/* PDF Link Styling */
+.download-btn {
+    display: inline-block;
+    background-color: #B86F52; /* Terracotta */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.download-btn:hover {
+    background-color: #2D572C;
+}

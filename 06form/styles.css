@@ -1,0 +1,321 @@
+/* -------------------------------------------------- */
+/* GENERAL PAGE SETUP                                 */
+/* -------------------------------------------------- */
+
+body {
+    font-family: 'Lora', serif; 
+    background-color: #FAF8F5; 
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* -------------------------------------------------- */
+/* HEADER SECTION                                     */
+/* -------------------------------------------------- */
+
+header {
+    background-color: #2D572C;
+    color: #FAF8F5;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem; 
+    font-weight: 500;
+    color: #FAF8F5;
+}
+
+header p {
+    margin-top: 5px;
+    font-style: italic;
+    color: #8AA389;
+}
+
+/* -------------------------------------------------- */
+/* NAVIGATION BAR                                     */
+/* -------------------------------------------------- */
+
+nav {
+    background-color: #8AA389; 
+    border-bottom: 5px solid #2D572C; 
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    padding: 0 2rem; 
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 48px; 
+    min-height: 48px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #FAF8F5;
+    color: #2D572C; 
+}
+
+/* Active State for Wayfinding */
+nav a.active {
+    background-color: #2D572C;
+    color: #FFFFFF;
+}
+
+/* -------------------------------------------------- */
+/* MAIN CONTENT                                       */
+/* -------------------------------------------------- */
+
+main {
+    max-width: 800px;
+    margin: 2rem auto; 
+    padding: 2rem; /* Added padding so text doesn't touch the border */
+    background-color: #ffffff; /* White background for text area */
+    
+    /* MOVED REQUIREMENT: Border and Radius are now here */
+    border: 1px solid #8AA389; /* Subtle Sage Green border */
+    border-radius: 8px;        /* Rounded corners */
+}
+
+h1 {
+    color: #2D572C;
+    font-weight: 500;
+}
+
+h2 {
+    color: #B86F52; 
+    border-bottom: 1px solid #8AA389;
+    padding-bottom: 5px;
+}
+
+p {
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+}
+
+main a {
+    color: #B86F52;
+    font-weight: bold;
+}
+
+main a:hover {
+    color: #2D572C;
+    text-decoration: none;
+}
+/* -------------------------------------------------- */
+/* LIST STYLING                                       */
+/* -------------------------------------------------- */
+
+ul {
+    list-style-type: square; 
+}
+
+li {
+    margin-bottom: 0.5rem;
+    padding-left: 5px;
+}
+
+dt {
+    font-weight: bold;
+    color: #2D572C;
+    margin-top: 1rem;
+    font-size: 1.1em;
+}
+
+dd {
+    margin-left: 20px;
+    font-style: italic;
+    color: #555;
+}
+
+/* -------------------------------------------------- */
+/* SPECIAL ELEMENTS & FOOTER                          */
+/* -------------------------------------------------- */
+
+address {
+    /* Removed the box/border properties */
+    background-color: transparent; 
+    border: none;
+    
+    /* Changed text styling to blend with footer */
+    color: #8AA389; /* Sage Green text */
+    font-style: normal;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+footer {
+    background-color: #2D572C;
+    color: #FAF8F5;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+
+/* -------------------------------------------------- */
+/* MODULE 5: IMAGES & GALLERY                         */
+/* -------------------------------------------------- */
+
+/* 1. Global Image Rules */
+img {
+    max-width: 100%; /* Makes images responsive */
+    height: auto;    /* Maintains aspect ratio */
+}
+
+/* 2. Home Page Floated Image */
+.float-right {
+    float: right;        /* Pushes image to the right */
+    width: 40%;          /* Sets size to percentage */
+    margin-left: 20px;   /* Adds space between text and image */
+    margin-bottom: 20px;
+    border: 1px solid #8AA389; /* Optional: matches your theme */
+    padding: 5px;
+    background-color: #fff;
+}
+
+/* Figure Caption Styling */
+figcaption {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #555;
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* 3. Footer Clear Fix (Requirement) */
+footer {
+    clear: both; /* Ensures footer stays below floated elements */
+}
+
+/* 4. Gallery Flexbox Layout */
+.gallery-grid {
+    display: flex;       /* The Magic Flexbox command */
+    flex-wrap: wrap;     /* Allows items to wrap to next row */
+    justify-content: center; /* Centers items */
+    gap: 20px;           /* Space between images */
+}
+
+/* Individual Gallery Figures */
+.gallery-grid figure {
+    /* Flex shorthand: grow (0), shrink (1), basis (250px) */
+    /* This ensures they stay in columns */
+    flex: 0 1 250px; 
+    margin: 0;           /* Resets default browser margin */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Adds nice shadow */
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+}
+/* -------------------------------------------------- */
+/* MODULE 6: WEB FORMS                                */
+/* -------------------------------------------------- */
+
+/* Form Container */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: 'Lora', serif;
+}
+
+/* Requirement: Style the fieldsets and legends */
+fieldset {
+    border: 2px solid #8AA389; /* Sage Green */
+    border-radius: 10px;       /* Requirement: Round corners */
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+legend {
+    color: #B86F52;            /* Terracotta */
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0 10px;
+}
+
+/* Requirement: Everything is left aligned (straight line eye tracking) */
+label {
+    display: block;            /* Forces label to sit on its own line */
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #2D572C;            /* Dark Green */
+    font-weight: 500;
+}
+
+/* Requirement: Styling text inputs, text areas, drop-downs */
+/* Requirement: Inputs have round corners and borders */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;               /* Full width for alignment */
+    padding: 12px;
+    border: 1px solid #8AA389;
+    border-radius: 5px;        /* Round corners */
+    box-sizing: border-box;    /* Ensures padding doesn't break width */
+    font-family: 'Lora', serif;
+    background-color: #FAF8F5; /* Requirement: Background color for typing area */
+    color: #333;               /* Requirement: Text color */
+    font-size: 1rem;
+}
+
+/* Focus state for better accessibility */
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border: 2px solid #B86F52; /* Terracotta highlight when typing */
+}
+
+textarea {
+    height: 150px;             /* Sets height for the big text box */
+}
+
+/* Styling for Checkboxes and Radios (Inline alignment) */
+.inline-group label {
+    display: inline-block;     /* Allows them to sit side-by-side */
+    margin-right: 15px;
+    margin-top: 5px;
+    font-weight: normal;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+    accent-color: #B86F52;     /* Makes the actual checkmark Terracotta */
+}
+
+/* Requirement: Style the submit button */
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;             /* Requirement: Padding */
+    background-color: #2D572C; /* Requirement: Background Color */
+    color: #fff;
+    border: none;              /* Requirement: Border (none or specific) */
+    border-radius: 8px;        /* Requirement: Round corners */
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #B86F52; /* Hover changes to Terracotta */
+}

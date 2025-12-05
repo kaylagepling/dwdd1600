@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact The Leafy Corner for plant advice.">
+    <meta name="author" content="[YOUR NAME]">
+    <title>The Leafy Corner | Contact</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+   <header>
+        <div class="header-inner">
+            <img src="images/logo.png" alt="Leafy Corner Logo" class="logo">
+            
+            <div class="site-name">
+                <h1>The Leafy Corner</h1>
+                <p>Adventures in small space gardening</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Plant Consultation</h1>
+        <p>Having trouble with a balcony plant? Fill out the form below and I'll do my best to help!</p>
+
+        <form method="GET" action="thanks.html">
+            
+            <fieldset>
+                <legend>About You</legend>
+                
+                <label for="fname">Full Name *</label>
+                <input type="text" id="fname" name="fullname" placeholder="Jane Doe" required>
+
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="555-123-4567">
+            </fieldset>
+
+            <fieldset>
+                <legend>The Plant Problem</legend>
+
+                <label for="topic">What seems to be the issue? *</label>
+                <select id="topic" name="topic" required>
+                    <option value="">-- Select an Issue --</option>
+                    <option value="pests">I see bugs/pests</option>
+                    <option value="drooping">Leaves are drooping</option>
+                    <option value="yellowing">Leaves are turning yellow</option>
+                    <option value="advice">General Care Advice</option>
+                </select>
+
+                <label>What is the light level?</label>
+                <div class="inline-group">
+                    <label><input type="radio" name="light" value="low"> Low Light</label>
+                    <label><input type="radio" name="light" value="medium"> Medium Light</label>
+                    <label><input type="radio" name="light" value="bright"> Bright/Direct Sun</label>
+                </div>
+
+                <label>Have you tried any of these yet?</label>
+                <div class="inline-group">
+                    <label><input type="checkbox" name="tried" value="water"> More Water</label>
+                    <label><input type="checkbox" name="tried" value="fertilizer"> Fertilizer</label>
+                    <label><input type="checkbox" name="tried" value="repotting"> Repotting</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Details</legend>
+
+                <label for="details">Describe the problem in detail:</label>
+                <textarea id="details" name="details" placeholder="Tell me more about your plant..."></textarea>
+            </fieldset>
+
+            <input type="submit" value="Send Request">
+
+        </form>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 The Leafy Corner</p>
+    </footer>
+
+</body>
+</html>

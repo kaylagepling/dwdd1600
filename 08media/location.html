@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Visit our workshop location and download our brochure.">
+    <meta name="author" content="[YOUR NAME]">
+    <title>The Leafy Corner | Location</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <img src="images/logo.png" alt="Leafy Corner Logo" class="logo">
+            <div class="site-name">
+                <h1>The Leafy Corner</h1>
+                <p>Adventures in small space gardening</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="care.html">Care Guide</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="location.html" class="active">Visit Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Visit Our Workshop</h1>
+        
+        <address style="font-style: normal; margin-bottom: 20px;">
+            <strong>The Leafy Corner HQ</strong><br>
+            123 Green Street<br>
+            Provo, UT 84604<br>
+            <a href="tel:5551234567">555-123-4567</a>
+        </address>
+
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3032.776662497645!2d-111.6585!3d40.2338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x874d90a5b5d72569%3A0x627c240940330367!2sProvo%2C%20UT!5e0!3m2!1sen!2sus!4v1646241234567!5m2!1sen!2sus" 
+                loading="lazy">
+            </iframe>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h2>Audio Welcome</h2>
+        <p>Listen to a quick welcome message from our founder.</p>
+
+        <audio controls>
+            <source src="media/welcome.ogg" type="audio/ogg">
+            <source src="media/welcome.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <br><br>
+
+        <h2>Downloads</h2>
+        <p>Want to take our tips offline?</p>
+
+        <p>
+            <a href="media/brochure.pdf" target="_blank" class="download-btn">Download Our Plant Brochure (PDF)</a>
+        </p>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 The Leafy Corner</p>
+    </footer>
+
+</body>
+</html>
